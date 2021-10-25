@@ -18,7 +18,7 @@ const FontDisplay = ({ size, type }) => {
 	if (type == "Heading")
 		return (
 			<Box p="2">
-				<Heading fontSize={size} textAlign="center">
+				<Heading fontSize={size} textAlign="start">
 					{size.toUpperCase()} {type} Font -{" "}
 					<i>{fontSize[size.toUpperCase()]}</i>
 				</Heading>
@@ -27,7 +27,7 @@ const FontDisplay = ({ size, type }) => {
 	if (type == "Body")
 		return (
 			<Box p="2">
-				<Text fontSize={size} textAlign="center">
+				<Text fontSize={size} textAlign="start">
 					{size.toUpperCase()} {type} Font -{" "}
 					<i>{fontSize[size.toUpperCase()]}</i>
 				</Text>

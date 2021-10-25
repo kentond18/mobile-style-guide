@@ -37,7 +37,7 @@ export default function Home() {
 							<Color />
 						</Flex>
 					</Box>
-					<Box>
+					<Box px="4" w="max-content">
 						<Heading pt="2" size="lg" textAlign="center">
 							Font
 						</Heading>
@@ -49,21 +49,17 @@ export default function Home() {
 						>
 							Heading Font
 						</Heading>
-						<Flex
-							flexDir={{ sm: "column", md: "row" }}
-							flexWrap="wrap"
-							justify="center"
-						>
-							{sizes.map((e, i) => {
-								return (
-									<FontDisplay
-										size={e.toLowerCase()}
-										key={i}
-										type="Heading"
-									/>
-								);
-							})}
-						</Flex>
+
+						{sizes.map((e, i) => {
+							return (
+								<FontDisplay
+									size={e.toLowerCase()}
+									key={i}
+									type="Heading"
+								/>
+							);
+						})}
+
 						<Heading
 							size="md"
 							textAlign="center"
@@ -72,21 +68,16 @@ export default function Home() {
 						>
 							Body Font
 						</Heading>
-						<Flex
-							flexDir={{ sm: "column", md: "row" }}
-							flexWrap="wrap"
-							justify="center"
-						>
-							{sizes.map((e, i) => {
-								return (
-									<FontDisplay
-										size={e.toLowerCase()}
-										key={i}
-										type="Body"
-									/>
-								);
-							})}
-						</Flex>
+
+						{sizes.map((e, i) => {
+							return (
+								<FontDisplay
+									size={e.toLowerCase()}
+									key={i}
+									type="Body"
+								/>
+							);
+						})}
 					</Box>
 				</Flex>
 			</body>
