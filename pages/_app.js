@@ -1,5 +1,7 @@
 import "@fontsource/mulish/400.css";
 import "@fontsource/merriweather/700.css";
+import "@fontsource/merriweather/900.css";
+import "@fontsource/merriweather/700-italic.css";
 
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../styles/theme";

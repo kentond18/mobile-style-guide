@@ -2,8 +2,11 @@ import { Box, Flex, Heading } from "@chakra-ui/layout";
 import Head from "next/head";
 import styles from "../styles/Home.module.scss";
 import Color from "./components/Color";
+import FontDisplay from "./components/FontDisplay";
 
 export default function Home() {
+	const sizes = ["XS", "SM", "MD", "LG", "XL", "2XL", "3XL", "4XL"];
+
 	return (
 		<div>
 			<Head>
@@ -17,8 +20,8 @@ export default function Home() {
 						Style Guide
 					</Heading>
 
-					<Box>
-						<Heading py="3" size="lg" textAlign="center">
+					<Box id="colors">
+						<Heading pt="2" size="lg" textAlign="center">
 							Colours
 						</Heading>
 						<Flex
@@ -32,6 +35,57 @@ export default function Home() {
 							<Color color="Orange" />
 							<Color color="Red" />
 							<Color />
+						</Flex>
+					</Box>
+					<Box>
+						<Heading pt="2" size="lg" textAlign="center">
+							Font
+						</Heading>
+						<Heading
+							size="md"
+							textAlign="center"
+							pt="3"
+							textDecor="underline"
+						>
+							Heading Font
+						</Heading>
+						<Flex
+							flexDir={{ sm: "column", md: "row" }}
+							flexWrap="wrap"
+							justify="center"
+						>
+							{sizes.map((e, i) => {
+								return (
+									<FontDisplay
+										size={e.toLowerCase()}
+										key={i}
+										type="Heading"
+									/>
+								);
+							})}
+						</Flex>
+						<Heading
+							size="md"
+							textAlign="center"
+							pt="3"
+							textDecor="underline"
+						>
+							Body Font
+						</Heading>
+						<Flex
+							flexDir={{ sm: "column", md: "row" }}
+							flexWrap="wrap"
+							justify="center"
+						>
+							{sizes.map((e, i) => {
+								return (
+									<FontDisplay
+										size={e.toLowerCase()}
+										key={i}
+										type="Body"
+									/>
+								);
+							})}
 						</Flex>
 					</Box>
 				</Flex>
